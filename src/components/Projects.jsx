@@ -4,10 +4,10 @@ export default function Projects() {
   const projectList = [
     {
       id: 1,
-      title: "SafariHub PWA",
-      category: "Full-Stack / React",
-      description: "Progressive Web Application built with modern React, Vite, and offline caching capabilities.",
-      tech: ["React", "Vite", "Tailwind CSS", "PWA"],
+      title: "IPAM System",
+      category: "Full-Stack / Infrastructure",
+      description: "IP Address Management platform designed to track subnets, monitor active IP allocations, and streamline network administration.",
+      tech: ["React", "Vite", "Tailwind CSS", "Node.js"],
       github: "https://github.com/NerdCodec"
     },
     {
