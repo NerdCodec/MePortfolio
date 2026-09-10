@@ -20,7 +20,7 @@ export default function Projects() {
       tagline: "Automation / Python",
       description: "Custom recon wrapper integrating subdomain enumeration, DNS probing, and target port profiling.",
       tech: ["Python", "Bash", "Security Tools"],
-      github: "https://github.com/NerdCodec"
+      github: "https://github.com/NerdCodec/recon-pipeline"
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ export default function Projects() {
       tagline: "OWASP / Bug Hunting",
       description: "Documented proofs-of-concept testing logic flaws, Cross-Site Scripting (XSS), and API vulnerabilities.",
       tech: ["OWASP Top 10", "Burp Suite", "Penetration Testing"],
-      github: "https://github.com/NerdCodec"
+      github: "https://github.com/NerdCodec/vulnerability-labs"
     }
   ];
 
