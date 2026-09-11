@@ -4,34 +4,39 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
 
   const projectList = [
-    {
-      id: 1,
-      title: "IPAM System",
-      category: "Full-Stack",
-      tagline: "Infrastructure / Subnet Tracking",
-      description: "IP Address Management platform designed to track subnets, monitor active IP allocations, and streamline network administration.",
-      tech: ["React", "Vite", "Tailwind CSS", "Node.js"],
-      github: "https://github.com/NerdCodec"
-    },
-    {
-      id: 2,
-      title: "Automated Recon Engine",
-      category: "Offensive Security",
-      tagline: "Automation / Python",
-      description: "Custom recon wrapper integrating subdomain enumeration, DNS probing, and target port profiling.",
-      tech: ["Python", "Bash", "Security Tools"],
-      github: "https://github.com/NerdCodec/recon-pipeline"
-    },
-    {
-      id: 3,
-      title: "Web Vulnerability Labs",
-      category: "Research",
-      tagline: "OWASP / Bug Hunting",
-      description: "Documented proofs-of-concept testing logic flaws, Cross-Site Scripting (XSS), and API vulnerabilities.",
-      tech: ["OWASP Top 10", "Burp Suite", "Penetration Testing"],
-      github: "https://github.com/NerdCodec/vulnerability-labs"
-    }
-  ];
+  {
+    id: 1,
+    title: "OWASP Juice Shop Vulnerability Labs",
+    category: "Offensive Security",
+    description: "Hands-on exploitation write-ups, proof-of-concept payloads, and root-cause remediation analysis covering XSS, SQLi, IDOR, and BAC.",
+    tech: ["Burp Suite", "Docker", "OWASP Top 10", "XSS", "SQLi"],
+    github: "https://github.com/NerdCodec/vulnerability-labs"
+  },
+  {
+    id: 2,
+    title: "Automated Reconnaissance Pipeline",
+    category: "Recon & Automation",
+    description: "Custom Bash automation tool integrating Subfinder, Amass, and Httpx for fast domain profiling, asset discovery, and live host identification.",
+    tech: ["Bash", "Subfinder", "Amass", "Httpx", "Linux"],
+    github: "https://github.com/NerdCodec/recon-pipeline"
+  },
+  {
+    id: 3,
+    title: "Web Endpoint & Directory Fuzzer",
+    category: "Tool Development",
+    description: "Modular Python-based endpoint discovery tool built to rapidly enumerate hidden administrative paths and exposed API routes.",
+    tech: ["Python", "HTTP Requests", "Threading", "Fuzzing"],
+    github: "https://github.com/NerdCodec/py-fuzzer"
+  },
+  {
+  id: 4,
+  title: "DNS Subdomain Enumerator",
+  category: "Recon & Automation",
+  description: "Python utility for fast attack surface discovery using socket-level A-record resolution to identify active subdomains and infrastructure IP mappings.",
+  tech: ["Python", "DNS", "Sockets", "Recon"],
+  github: "https://github.com/NerdCodec/sub-fuzzer"
+  }
+];
 
   const categories = ['All', 'Full-Stack', 'Offensive Security', 'Research'];
 
