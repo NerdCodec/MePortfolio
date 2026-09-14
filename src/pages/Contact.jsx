@@ -9,7 +9,7 @@ export default function Contact() {
           <h2 className="text-2xl font-bold text-slate-100">Get In Touch</h2>
           <p className="text-slate-400">Available for penetration testing, security research, and tool development.</p>
           <div className="space-y-3 pt-2">
-            <p className="text-slate-300"><strong>Email:</strong> dante.sec@example.com</p>
+            <p className="text-slate-300"><strong>Email:</strong> dante.offsec@protonmail.com</p>
             <p className="text-slate-300"><strong>GitHub:</strong> github.com/NerdCodec</p>
             <p className="text-slate-300"><strong>Location:</strong> Kali Linux Lab / Remote</p>
           </div>
