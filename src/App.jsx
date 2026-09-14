@@ -1,44 +1,44 @@
 import React from 'react';
-import Hero from './components/Hero';
+import { Routes, Route, Link } from 'react-router-dom';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import Projects from './components/Projects';
+import InteractiveFuzzer from './components/InteractiveFuzzer';
 
-function App() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100 font-sans">
-      {/* Navigation Bar */}
-      <nav className="fixed top-0 left-0 w-full bg-slate-900/90 backdrop-blur border-b border-slate-800 z-50 px-6 py-4 flex justify-between items-center">
-        <span className="text-xl font-bold text-teal-400">Dante | OffSec</span>
+    <div className="min-h-screen bg-slate-900 text-slate-100 font-sans relative">
+      <nav className="fixed top-0 left-0 w-full bg-slate-900/90 backdrop-blur border-b border-slate-800 z-50 px-8 py-4 flex justify-between items-center">
+        <Link to="/" className="text-xl font-bold text-teal-400">Dante | OffSec</Link>
         <div className="space-x-6 text-sm font-medium">
-          <a href="#about" className="hover:text-teal-400 transition">About</a>
-          <a href="#research" className="hover:text-teal-400 transition">Security Research</a>
-          <a href="#contact" className="hover:text-teal-400 transition">Contact</a>
+          <Link to="/" className="hover:text-teal-400">Home</Link>
+          <Link to="/about" className="hover:text-teal-400">About</Link>
+          <Link to="/research" className="hover:text-teal-400">Security Research</Link>
+          <Link to="/terminal" className="hover:text-teal-400">Live Terminal</Link>
+          <Link to="/contact" className="hover:text-teal-400">Contact</Link>
         </div>
       </nav>
 
-      <div className="pt-20">
-        {/* About Section / Hero */}
-        <section id="about">
-          <Hero />
-        </section>
-
-        {/* Security Research & Projects */}
-        <section id="research" className="max-w-6xl mx-auto px-6 py-12">
-          <h2 className="text-3xl font-bold text-teal-400 mb-6">Security Research & Tools</h2>
-          <Projects />
-        </section>
-
-        {/* Contact Section */}
-        <section id="contact" className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
-          <h2 className="text-3xl font-bold text-teal-400 mb-4">Contact & Engagement</h2>
-          <p className="text-slate-400 mb-6">Open for penetration testing opportunities, vulnerability research collaboration, and offensive tool development.</p>
-          <div className="flex space-x-4">
-            <a href="https://github.com/NerdCodec" target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded border border-slate-700 text-teal-400">GitHub Profile</a>
-            <a href="mailto:your-email@example.com" className="px-4 py-2 bg-teal-500 hover:bg-teal-600 text-slate-900 font-bold rounded">Get In Touch</a>
-          </div>
-        </section>
+      <div className="pt-24 relative z-10">
+        <Routes>
+          <Route path="/" element={
+            <div className="max-w-6xl mx-auto px-6 py-12 space-y-12">
+              <div className="text-center space-y-4">
+                <h1 className="text-5xl font-extrabold text-slate-100">Offensive Security Portfolio</h1>
+                <p className="text-slate-400 max-w-2xl mx-auto">Vulnerability research, automated recon scripts, and custom tool development.</p>
+                <div className="pt-4">
+                  <a href="/Portfolio_Architecture_Guide.pdf" download className="px-5 py-3 bg-teal-500 text-slate-900 font-bold rounded hover:bg-teal-400 transition">Download Architecture Guide (PDF)</a>
+                </div>
+              </div>
+              <Projects />
+            </div>
+          } />
+          <Route path="/about" element={<About />} />
+          <Route path="/research" element={<div className="max-w-6xl mx-auto px-6 py-12"><Projects /></div>} />
+          <Route path="/terminal" element={<div className="max-w-4xl mx-auto px-6 py-12"><InteractiveFuzzer /></div>} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
     </div>
   );
 }
-
-export default App;
