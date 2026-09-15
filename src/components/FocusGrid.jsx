@@ -25,10 +25,10 @@ export default function FocusGrid() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-8 grid md:grid-cols-3 gap-6">
       {capabilities.map((item) => (
-        <div key={item.id} className="p-6 rounded-xl bg-slate-900/50 border border-slate-800 text-left hover:border-slate-700 transition-all">
+        <div key={item.id} className="p-6 rounded-xl bg-zinc-900/50 border border-zinc-800 text-left hover:border-zinc-700 transition-all">
           <div className="text-sky-400 font-mono text-sm mb-2">&gt; {item.id}. {item.title}</div>
-          <h3 className="text-lg font-bold text-slate-200 mb-2">{item.heading}</h3>
-          <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+          <h3 className="text-lg font-bold text-zinc-200 mb-2">{item.heading}</h3>
+          <p className="text-zinc-400 text-sm leading-relaxed">{item.desc}</p>
         </div>
       ))}
     </section>

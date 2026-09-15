@@ -45,11 +45,11 @@ export default function Projects() {
     : projectList.filter(p => p.category === activeFilter);
 
   return (
-    <section id="projects" className="max-w-5xl mx-auto px-6 py-16 border-t border-slate-800/80">
+    <section id="projects" className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800/80">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
         <div>
-          <h2 className="text-2xl font-bold text-slate-100 font-sans">Featured Work &amp; Research</h2>
-          <p className="text-slate-400 text-sm mt-1">Key software projects and security write-ups.</p>
+          <h2 className="text-2xl font-bold text-zinc-100 font-sans">Featured Work &amp; Research</h2>
+          <p className="text-zinc-400 text-sm mt-1">Key software projects and security write-ups.</p>
         </div>
 
         {/* Dynamic Category Filters */}
@@ -61,7 +61,7 @@ export default function Projects() {
               className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all ${
                 activeFilter === cat
                   ? 'bg-sky-500/20 text-sky-400 border border-sky-500/40'
-                  : 'bg-slate-900 text-slate-400 border border-slate-800 hover:border-slate-700 hover:text-slate-200'
+                  : 'bg-zinc-900 text-zinc-400 border border-zinc-800 hover:border-zinc-700 hover:text-zinc-200'
               }`}
             >
               {cat}
@@ -74,14 +74,14 @@ export default function Projects() {
         {filteredProjects.map((project) => (
           <div 
             key={project.id} 
-            className="flex flex-col justify-between p-6 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-sky-500/40 transition-all group"
+            className="flex flex-col justify-between p-6 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-sky-500/40 transition-all group"
           >
             <div>
               <span className="text-xs font-mono text-sky-400 block mb-2">{project.tagline}</span>
-              <h3 className="text-xl font-bold text-slate-100 group-hover:text-sky-400 transition-colors mb-3">
+              <h3 className="text-xl font-bold text-zinc-100 group-hover:text-sky-400 transition-colors mb-3">
                 {project.title}
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-6">
+              <p className="text-zinc-400 text-sm leading-relaxed mb-6">
                 {project.description}
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function Projects() {
             <div>
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((t, idx) => (
-                  <span key={idx} className="text-[11px] font-mono bg-slate-800 text-slate-300 px-2 py-1 rounded">
+                  <span key={idx} className="text-[11px] font-mono bg-zinc-800 text-zinc-300 px-2 py-1 rounded">
                     {t}
                   </span>
                 ))}
@@ -100,7 +100,7 @@ export default function Projects() {
                   href={project.github} 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="text-slate-300 hover:text-sky-400 transition-colors"
+                  className="text-zinc-300 hover:text-sky-400 transition-colors"
                 >
                   Source Code &rarr;
                 </a>

@@ -2,27 +2,22 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <main className="max-w-5xl mx-auto px-6 pt-20 pb-12 text-center">
-      <div className="inline-block px-3 py-1 mb-6 rounded-full bg-slate-900 border border-slate-800 text-sky-400 text-xs font-mono">
-        OFFENSIVE SECURITY & FULL-STACK ENGINEERING
-      </div>
-      
-      <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-50 mb-6 leading-tight">
-        Probing Web Systems &amp; Building <br className="hidden md:inline"/> Secure Digital Products.
+    <div className="text-center space-y-4 py-8">
+      <h1 className="text-5xl font-black tracking-tight text-[#00f0ff] drop-shadow-[0_0_12px_rgba(0,240,255,0.8)]">
+        OFFENSIVE SECURITY LABS
       </h1>
-      
-      <p className="max-w-2xl mx-auto text-slate-400 text-lg mb-10 leading-relaxed">
-        Specializing in Web Penetration Testing, Custom Security Automation, and Modern Web Applications.
+      <p className="text-[#ff0055] font-semibold tracking-widest text-sm">
+        AUTOMATED RECON // VULNERABILITY RESEARCH // CUSTOM EXPLOITS
       </p>
-
-      <div className="flex justify-center items-center gap-4">
-        <a href="#projects" className="px-6 py-3 rounded-lg bg-sky-500 text-slate-950 font-semibold hover:bg-sky-400 transition-all shadow-lg shadow-sky-500/10">
-          View Work
-        </a>
-        <a href="https://github.com/NerdCodec" target="_blank" rel="noreferrer" className="px-6 py-3 rounded-lg bg-slate-900 text-slate-200 border border-slate-800 font-semibold hover:bg-slate-800 hover:border-slate-700 transition-all">
-          GitHub Profile
+      <div className="pt-4">
+        <a 
+          href="/Portfolio_Architecture_Guide.pdf" 
+          download 
+          className="px-6 py-3 bg-[#00f0ff] text-black font-extrabold hover:bg-[#ff0055] hover:text-white transition shadow-[0_0_20px_rgba(0,240,255,0.6)]"
+        >
+          DOWNLOAD BLUEPRINT (PDF)
         </a>
       </div>
-    </main>
+    </div>
   );
 }
