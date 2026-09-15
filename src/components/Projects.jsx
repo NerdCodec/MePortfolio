@@ -13,12 +13,12 @@ export default function Projects() {
     github: "https://github.com/NerdCodec/vulnerability-labs"
   },
   {
-    id: 2,
-    title: "Automated Reconnaissance Pipeline",
-    category: "Recon & Automation",
-    description: "Custom Bash automation tool integrating Subfinder, Amass, and Httpx for fast domain profiling, asset discovery, and live host identification.",
-    tech: ["Bash", "Subfinder", "Amass", "Httpx", "Linux"],
-    github: "https://github.com/NerdCodec/recon-pipeline"
+  id: 2,
+  title: "Automated Reconnaissance Pipeline",
+  category: "Recon & Automation",
+  description: "Modular Bash/Python pipeline featuring multi-engine subdomain discovery, attack surface delta tracking (diffing), JS secret grepping, custom Nuclei vulnerability templates, and authenticated scan wrappers.",
+  tech: ["Bash", "Python", "Nuclei", "Subfinder", "Katana", "Linux"],
+  github: "https://github.com/NerdCodec/recon-pipeline"
   },
   {
     id: 3,
